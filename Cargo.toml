@@ -1,0 +1,9 @@
+[package]
+name = "flotsam"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+digitalocean = "0.1.1"
+dotenv = "0.15.0"
+tokio = "1.39.2"
