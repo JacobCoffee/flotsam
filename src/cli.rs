@@ -33,7 +33,7 @@ pub fn find_droplet(client: &DigitalOcean, name: &str) {
             }
 
             if let Some(droplet) = best_match {
-                println!("Dropet found:");
+                println!("Droplet found:");
                 println!("ID: {}", droplet.id());
                 println!("Name: {}", droplet.name());
                 println!("Status: {}", droplet.status());
