@@ -49,3 +49,10 @@ pub fn find_droplet(client: &DigitalOcean, name: &str) {
         Err(e) => println!("Error finding droplet: {:?}", e),
     }
 }
+
+pub fn clone_droplet(client: &DigitalOcean, name: &str, os_version: Option<String>) {
+    println!(
+        "Cloning droplet '{}' with OS version '{:?}' not implemented.",
+        name, os_version
+    );
+}

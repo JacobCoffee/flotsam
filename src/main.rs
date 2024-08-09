@@ -21,6 +21,14 @@ enum Commands {
         /// The name of the droplet to find (Uses Fuzzy search w/ Jaro-Winkler similarity)
         name: String,
     },
+    // /// Create an OS-upgraded droplet
+    // CloneDroplet {
+    //     /// The name of the droplet to clone
+    //     name: String,
+    //     /// The OS version to use for the new droplet
+    //     /// (default: the latest LTS version)
+    //     os_version: Option<String>,
+    // },
 }
 
 fn main() {
@@ -34,6 +42,10 @@ fn main() {
     match cli.command {
         Some(Commands::ListDroplets) => cli::list_droplets(&client),
         Some(Commands::FindDroplet { name }) => cli::find_droplet(&client, &name),
+        // Some(Commands::CloneDroplet { name, os_version }) => {
+        //     cli::clone_droplet(&client, &name, os_version)
+        // }
+        // Some(Commands::ListUbuntuImages) => cli::list_ubuntu_images(&client),
         None => println!("No command specified. Use --help for usage information."),
     }
 }
